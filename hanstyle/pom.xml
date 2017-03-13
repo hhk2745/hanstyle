@@ -39,7 +39,7 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
 		</dependency>	
-		
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -88,6 +88,13 @@
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
+		</dependency>
+		
+		<!-- jackson -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
 		</dependency>
 				
 		<!-- Servlet -->

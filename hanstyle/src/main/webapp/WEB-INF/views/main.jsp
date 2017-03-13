@@ -5,11 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="description" content="tutorials spring">
+    <meta name="author" content="hhk">
 
     <title>Carousel Template for Bootstrap</title>
 
@@ -51,7 +50,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="/product.do">PRODUCT</a></li>
+                <li class="active"><a href="product/list.do">PRODUCT</a></li>
                 <li><a href="#event">EVENT</a></li>
                 <li><a href="#media">MEDIA</a></li>
                 <li><a href="#brand">BRAND</a></li>
