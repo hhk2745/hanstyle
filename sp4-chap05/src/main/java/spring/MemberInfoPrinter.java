@@ -1,16 +1,11 @@
 package spring;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class MemberInfoPrinter {
 
-	@Resource(name = "memberDAO")
 	private MemberDAO memberDAO;
-
-	@Autowired
-	private MemberPrinter pinter;
+	private MemberPrinter memberPrinter;
 	// printer 참조변수의 이름
 
 	public void printMemberInfo(String email) {
@@ -19,16 +14,18 @@ public class MemberInfoPrinter {
 			System.out.println("NO DATA\n");
 			return;
 		}
-		pinter.print(member);
+		memberPrinter.print(member);
 		System.out.println("a".hashCode());
 	}
 
+	@Autowired
 	public void setMemberDAO(MemberDAO memberDAO) {
 		this.memberDAO = memberDAO;
 	}
 
-	public void setPinter(MemberPrinter pinter) {
-		this.pinter = pinter;
+	@Autowired
+	public void setMemberPrinter(MemberPrinter memberPrinter) {
+		this.memberPrinter = memberPrinter;
 	}
 
 }

@@ -2,18 +2,15 @@ package spring;
 
 import java.util.Date;
 
-import javax.annotation.Resource;
-
 public class MemberRegisterService {
 	
-	@Resource(name="memberDAO")
-	private MemberDAO dao;
+	private MemberDAO memberDAO;
 	
 	public MemberRegisterService() {
 	}
 	
 	public void regist(RegisterRequest req){
-		Member member = dao.selectByEmail(req.getEmail());
+		Member member = memberDAO.selectByEmail(req.getEmail());
 		if(member!=null){
 			throw new AlreadyExistingMemberException("dup email "+ req.getEmail());
 		}
@@ -25,8 +22,10 @@ public class MemberRegisterService {
 						req.getName(), 
 						new Date());
 		
-		dao.insert(newMember);
+		memberDAO.insert(newMember);
 	}
 
-	
+	public void setMemberDAO(MemberDAO memberDAO) {
+		this.memberDAO = memberDAO;
+	}
 }
