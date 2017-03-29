@@ -16,6 +16,7 @@ public class ConfigPart1 {
 	@Bean
 	public MemberRegisterService memberRegSvc(){
 		MemberRegisterService service = new MemberRegisterService();
+		
 		service.setMemberDAO(memberDAO());
 		return service;
 	}
