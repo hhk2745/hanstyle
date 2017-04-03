@@ -25,7 +25,6 @@ public class Main {
 		regSvc.regist(regReq);
 
 		infoPrinter.printMemberInfo("madvirus@madvirus.net");
-		//TODO
 		
 	}
 }

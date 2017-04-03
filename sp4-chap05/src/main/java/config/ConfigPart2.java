@@ -19,7 +19,8 @@ public class ConfigPart2 {
 		return new MemberPrinter();
 	}
 	
-	public MemberInfoPrinter memberInfoPrinter(){
+	@Bean
+	public MemberInfoPrinter infoPrinter(){
 		MemberInfoPrinter infoPrinter = new MemberInfoPrinter();
 		infoPrinter.setMemberDAO(memberDAO);
 		infoPrinter.setMemberPrinter(memberPrinter());
